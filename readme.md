@@ -48,5 +48,9 @@ Explore os exemplos e códigos disponíveis para cada estrutura e algoritmo. Exp
 
 ## Material de apoio
 
-Apostila de algoritmos e estrutura de dados - Prof. Dr. Alexandre Levada  (UFSCAR)
+
+Manual Completo de algoritmos e estrutura de dados - Prof. Dr. Alexandre Levada  (UFSCAR)
+
+DOI: 10.13140/RG.2.2.11875.87847
+
 ---
