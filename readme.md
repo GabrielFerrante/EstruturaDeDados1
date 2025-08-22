@@ -45,4 +45,8 @@ Auxiliar estudantes e profissionais a compreender e implementar as principais es
 
 Explore os exemplos e códigos disponíveis para cada estrutura e algoritmo. Experimente modificar e adaptar conforme sua necessidade.
 
+
+## Material de apoio
+
+Apostila de algoritmos e estrutura de dados - Prof. Dr. Alexandre Levada  (UFSCAR)
 ---
