@@ -1,4 +1,4 @@
-# Estrutura de Dados 1
+# Algoritmos e Estrutura de Dados
 
 Este repositório contém materiais e exemplos relacionados aos principais conceitos de Estrutura de Dados, fundamentais para o desenvolvimento eficiente de algoritmos e aplicações.
 
