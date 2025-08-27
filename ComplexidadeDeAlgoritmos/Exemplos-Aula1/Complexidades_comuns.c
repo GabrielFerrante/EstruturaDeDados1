@@ -83,7 +83,7 @@ int func_D(int n){ //Sucessivas divisões por 2 (log na base 2, quanto maior a ba
 // Big O(log2 n)
 
 // Note que x, é o valor resultante da divisão, se este valor é decimal, ele pega a maior parte inteira menor que o número.
-// se for 2,5, será 2. se for -3,4 será -4, por que -4 é o maior inteiro menor que -4 (-4 esta mais a esquerda na reta numerica)
+// se for 2,5, será 2. se for -3,4 será -4, por que -4 é o maior inteiro menor que -3,4 (-4 esta mais a esquerda na reta numerica)
 
 
 int func_E(n){
