@@ -47,11 +47,38 @@ long long int fibonacci(int n){
 //logo: T(n) = 2^n+1 - 1
 //Nosso Big O(2^n) exponencial, ou seja, péssimo em eficiência.
 
+long long int fibonacci_iterativo(int n){
+	if(n==0){
+		return 0;
+	}else{
+		if(n==1){
+			return 1;
+		}else{
+			long long int a=0;//---------------------------------------------1
+			long long int b=1;//---------------------------------------------1
+			int i=2;//---------------------------------------------1
+			long long int c=0;//---------------------------------------------1
+			for(i=2; i <= n; i++){//----------------SOMATÓRIO- LS: N, LI: i=2, Termo: 3
+				c = a + b; //----------------------------1
+				a = b; //----------------------------1
+				b = c; //----------------------------1
+			}
+			return c;
+		}
+	}
+}
+//T(n) = 4 + SOMATÓRIO- LS: N, LI: i=2, TERMO: 3
+//T(n) = 4 + 3 . SOMATÓRIO- LS: N, LI: i=2, TERMO: 1
+//T(n) = 4 + 3 . (n-1), note que (n-1) é devido ao "i" iniciar em 2.
+//T(n) = 4 + 3n-1.
+//Logo, a notação Big O(N) 
 void main(){
 	
 	int n = 50;
-	long long int resultado = fibonacci(n);
-	printf("Fibonacci: %lld \n", resultado);
+	//long long int resultado = fibonacci(n);
+	//printf("Fibonacci: %lld \n", resultado);
+	long long int resultado = fibonacci_iterativo(n);
+	printf("Fibonacci Iterativo: %lld \n", resultado);
 	system("PAUSE");
 	
 }
