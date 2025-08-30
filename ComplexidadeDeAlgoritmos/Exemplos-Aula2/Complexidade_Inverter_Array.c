@@ -12,7 +12,7 @@ void swap(int*L, int a, int b){
 }
 // Note que a função é simples, com complexidade Big O(1)
 //Para fazer a inversão de forma recursiva, precisamos entender a condição de parada.
-// Temos que ter o último número <= primeiro número
+// Temos que ter o index do fim <= o index do inicio, lembrando, o fim é iniciado pela ultima posição do array e inicio é o primeiro index
 
 void insert(int *L, int inicio, int fim){
 	printf("Inicio : %d | Fim : %d\n", inicio, fim);
