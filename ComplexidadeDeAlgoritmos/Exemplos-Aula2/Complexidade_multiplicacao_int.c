@@ -3,6 +3,10 @@
 #include <string.h>  // Biblioteca para manipulação de strings (strlen, memmove, memset)
 #include <math.h>    // Biblioteca para funções matemáticas (fmax, fmin)
 
+//NOTA: ESTE CÓDIGO FOI DESENVOLVIDO COM AUXÍLIO DE I.A GENERATIVA. 
+//PARA EFEITOS DE ESTUDO FOI FEITO EM LIGUAGEM C, MAS É RECOMENDADO FAZER EM UMA LINGUAGEM MAIS AMIGÁVEL
+//MUITAS DAS FUNÇÕES AUXILIARES DEIXAM O CÓDIGO POLUIDO, QUE NÃO TERIA A NECESSIDADE DE FAZER EM UMA LINGUAGEM DE ALTO NIVEL.
+
 // Estrutura para representar números grandes com dígitos armazenados em ordem reversa
 typedef struct {
     int* digits;   // Array de dígitos (ordem reversa: dígito menos significativo primeiro)
