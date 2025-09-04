@@ -3,14 +3,16 @@
 #include <string.h>
 #include <stdbool.h>
 
-const char dir[] = "DLRU";
+const char dir[] = "BEDC";
 const int dr[] = {1, 0, 0, -1};
 const int dc[] = {0, -1, 1, 0};
 
+
+//CODIGOS REFERENTES A CONSTRUÇÕES DE LISTAS, CONTEÚDO AVANÇADO
 typedef struct {
     char** caminhos;
-    int quantidade;
-    int capacidade;
+    int quantidade; //Quantidade de caminhos
+    int capacidade; //Capacidade 
 } ListaCaminhos;
 
 bool ehValido(int linha, int coluna, int n, int labirinto[4][4], bool visitado[4][4]) {
@@ -40,7 +42,11 @@ void liberarLista(ListaCaminhos* lista) {
         free(lista->caminhos[i]);
     }
     free(lista->caminhos);
+
 }
+
+
+
 
 void encontrarCaminhos(int linha, int coluna, int n, int labirinto[4][4], bool visitado[4][4],
                       char* caminhoAtual, int indiceCaminho, ListaCaminhos* resultados) {
@@ -70,7 +76,7 @@ void encontrarCaminhos(int linha, int coluna, int n, int labirinto[4][4], bool v
 ListaCaminhos ratoNoLabirinto(int labirinto[4][4]) {
     ListaCaminhos resultados;
     inicializarLista(&resultados, 10);
-    int n = 4;
+    int n = 4; // TAMANHO DE LINHAS E COLUANS
     
     if (labirinto[0][0] == 1 && labirinto[n-1][n-1] == 1) {
         bool visitado[4][4] = {false};
@@ -86,9 +92,9 @@ int main() {
     int labirinto[4][4] = {
         {1, 0, 0, 0},
         {1, 1, 0, 1},
-        {1, 1, 0, 0},
+        {0, 1, 0, 0},
         {0, 1, 1, 1}
-    };
+    }; //Lembrando, ele não anda nas diagonais.
     
     ListaCaminhos resultados = ratoNoLabirinto(labirinto);
     
