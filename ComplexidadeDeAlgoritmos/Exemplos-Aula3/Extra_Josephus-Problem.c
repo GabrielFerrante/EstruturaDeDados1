@@ -47,7 +47,7 @@ int elimina_pessoas(int* pessoas, int tamanho, int n, int k, int index) {
 }
 
 int main() {
-    int n = 5;
+    int n = 14;
     int k = 2;
     if (n == k) {
         printf("NAO PERMITIDO !");
@@ -67,7 +67,7 @@ int main() {
     }
 
     int resultado = elimina_pessoas(pessoas, n, n, k, 0);
-    printf("\nA pessoa sobrevivente eh: %d\n", resultado);
+    printf("\nA pessoa sobrevivente seria: %d\n", resultado);
 
     free(pessoas);
     return 0;
