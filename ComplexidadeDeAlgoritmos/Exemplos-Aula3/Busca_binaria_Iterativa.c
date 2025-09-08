@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int busca_binaria(int array[], int tamanho, int elemento) {
+int busca_binaria_iterativa(int array[], int tamanho, int elemento) {
     int inicio = 0;
     int fim = tamanho - 1;
     
@@ -33,7 +33,7 @@ int main() {
     
     // Teste 1: Elemento presente
     elemento = 6;
-    int resultado = busca_binaria(arr, tamanho, elemento);
+    int resultado = busca_binaria_iterativa(arr, tamanho, elemento);
     if (resultado != -1) {
         printf("Elemento %d encontrado no indice %d.\n", elemento, resultado);
     } else {
@@ -42,7 +42,7 @@ int main() {
     
     // Teste 2: Elemento não presente
     elemento = 7;
-    resultado = busca_binaria(arr, tamanho, elemento);
+    resultado = busca_binaria_iterativa(arr, tamanho, elemento);
     if (resultado != -1) {
         printf("Elemento %d encontrado no indice %d.\n", elemento, resultado);
     } else {
