@@ -14,52 +14,46 @@ int is_full(Priority_queue *q) {
     return q->size == MAX_SIZE;
 }
 
-int FindMin(Priority_queue *q) {
+int FindMax(Priority_queue *q) {
     if (is_empty(q)) {
         return -1;
     }
     
     int index = 0;
-    int min = q->data[index].p;
+    int max = q->data[index];
     int i = 1;
     for (i = 1; i < q->tail; i++) {
-        if (q->data[i].p < min) {
-            min = q->data[i].p;
+        if (q->data[i] > max) {
+            max = q->data[i];
             index = i;
         }
     }
     return index;
 }
 
-void enqueue(Priority_queue *q, int key, int priority) {
+void enqueue(Priority_queue *q, int value) {
     if (is_full(q)) {
         printf("Fila de prioridade cheia!\n");
         return;
     }
     
-    // Adiciona no final
-    q->data[q->tail].key = key;
-    q->data[q->tail].p = priority;
+    q->data[q->tail] = value;
     q->tail++;
     q->size++;
 }
 
-Node dequeue(Priority_queue *q) {
-    Node empty_node = {-1, -1};
-    
+int dequeue(Priority_queue *q) {
     if (is_empty(q)) {
         printf("Fila de prioridade vazia!\n");
-        return empty_node;
+        return -1;
     }
     
-    // Encontra o índice do elemento com menor prioridade
-    int min_index = FindMin(q);
+    int max_index = FindMax(q);
+    int result = q->data[max_index];
     
-    // Salva o resultado
-    Node result = q->data[min_index];
-    int i ;
     // Remove o elemento deslocando os elementos posteriores
-    for (i = min_index; i < q->tail - 1; i++) {
+    int i;
+    for ( i = max_index; i < q->tail - 1; i++) {
         q->data[i] = q->data[i + 1];
     }
     
@@ -69,14 +63,11 @@ Node dequeue(Priority_queue *q) {
     return result;
 }
 
-Node peek(Priority_queue *q) {
-    Node empty_node = {-1, -1};
-    
+int peek(Priority_queue *q) {
     if (is_empty(q)) {
-        printf("Fila de prioridade vazia!\n");
-        return empty_node;
+        return -1;
     }
     
-    int min_index = FindMin(q);
-    return q->data[min_index];
+    int max_index = FindMax(q);
+    return q->data[max_index];
 }

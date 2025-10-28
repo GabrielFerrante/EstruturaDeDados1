@@ -4,12 +4,7 @@
 #define MAX_SIZE 100000
 
 typedef struct {
-    int key;
-    int p;  // prioridade (quanto menor o valor, maior a prioridade)
-} Node;
-
-typedef struct {
-    Node data[MAX_SIZE];
+    int data[MAX_SIZE];
     int tail;
     int size;
 } Priority_queue;
@@ -20,11 +15,11 @@ int is_empty(Priority_queue *q);
 int is_full(Priority_queue *q);
 
 // Operações principais
-void enqueue(Priority_queue *q, int key, int priority);
-Node dequeue(Priority_queue *q);
-Node peek(Priority_queue *q);
+void enqueue(Priority_queue *q, int value);
+int dequeue(Priority_queue *q);
+int peek(Priority_queue *q);
 
-// Nova função
-int FindMin(Priority_queue *q);
+// Funções auxiliares
+int FindMax(Priority_queue *q);
 
 #endif
