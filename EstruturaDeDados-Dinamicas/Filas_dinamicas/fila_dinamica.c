@@ -6,7 +6,7 @@ void inicializar(FilaDinamica* fila) {
     fila->tras = NULL;
 }
 
-void enfileirar(FilaDinamica* fila, int valor) {
+void enfileirar(FilaDinamica* fila, int valor) { //VERSÃO DE ENQUEUE DE O(1), tem uma versão que não usa ponteiro de tras, assim ficaria O(n) a inserção.
     No* novo = (No*)malloc(sizeof(No));
     novo->valor = valor;
     novo->proximo = NULL;
